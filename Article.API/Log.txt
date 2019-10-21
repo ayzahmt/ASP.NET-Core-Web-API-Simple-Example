@@ -1,0 +1,31 @@
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles  
+Warning:  - Failed to determine the https port for redirect.
+Information:  - Route matched with {action = "Get", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.Article] Get() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executed action Article.API.Controllers.ArticlesController.Get (Article.API) in 177.6316ms
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information:  - Request finished in 657.8903ms 500 text/html; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/favicon.ico  
+Information:  - Request finished in 10.4107ms 404 
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles  
+Warning:  - Failed to determine the https port for redirect.
+Information:  - Route matched with {action = "Get", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.Article] Get() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executed action Article.API.Controllers.ArticlesController.Get (Article.API) in 156.5325ms
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information:  - Request finished in 578.0069ms 500 text/html; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/favicon.ico  
+Information:  - Request finished in 8.6941ms 404 
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles  
+Warning:  - Failed to determine the https port for redirect.
+Information:  - Route matched with {action = "Get", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.Article] Get() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.Get (Article.API) - Validation state: Valid
+Information:  - Calle GET method.
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Author], [a].[Name], [a].[PublishDate], [a].[Subject]
+FROM [Article] AS [a]
+Information:  - Executed action method Article.API.Controllers.ArticlesController.Get (Article.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4333.9346ms.
+Information:  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Article.API.Article, Article.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.Get (Article.API) in 4673.122ms
+Information:  - Request finished in 5037.8199ms 200 application/json; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/favicon.ico  
+Information:  - Request finished in 14.6894ms 404 
