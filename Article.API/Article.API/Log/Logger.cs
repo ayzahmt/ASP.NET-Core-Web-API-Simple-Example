@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Article.API.Log
+namespace Article.API
 {
     public class Logger : ILogger
     {

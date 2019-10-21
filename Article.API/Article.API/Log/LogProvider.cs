@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Article.API.Log
+namespace Article.API
 {
     public class LogProvider : ILoggerProvider
     {
