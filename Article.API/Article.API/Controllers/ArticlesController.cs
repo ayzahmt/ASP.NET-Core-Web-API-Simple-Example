@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
@@ -14,11 +15,14 @@ namespace Article.API.Controllers
     {
         readonly ArticleContext context;
         readonly ILogger<ArticlesController> logger;
+        readonly IMemoryCache memoryCache;
+        const string cacheKey = "ArticleListKey";
 
-        public ArticlesController(ArticleContext context, ILogger<ArticlesController> logger)
+        public ArticlesController(ArticleContext context, ILogger<ArticlesController> logger, IMemoryCache memoryCache)
         {
             this.context = context;
             this.logger = logger;
+            this.memoryCache = memoryCache;
         }
 
         // GET api/articles
@@ -26,20 +30,62 @@ namespace Article.API.Controllers
         public IEnumerable<Article> Get()
         {
             logger.LogInformation("Called GET method.");
-            return context.Article.ToList();
+
+            if (!memoryCache.TryGetValue(cacheKey, out IEnumerable<Article> articleList))
+            {
+                // If memory has not value then retrieve data from database and set cache.
+                articleList = context.Article.ToList();
+
+                var cacheOptions = new MemoryCacheEntryOptions
+                {
+                    AbsoluteExpiration = DateTime.Now.AddMinutes(5),
+                    Priority = CacheItemPriority.Normal
+                };
+
+                memoryCache.Set(cacheKey, articleList, cacheOptions);
+
+                logger.LogInformation("List has been retrieved from database.");
+            }
+            else
+            {
+                logger.LogInformation("List has been retrieved from cache.");
+            }
+
+            return articleList;
         }
 
         // GET api/articles/5
         [HttpGet("{id}")]
         public ActionResult Get(int id)
         {
-            var article = context.Article.FirstOrDefault(x => x.Id == id);
+            logger.LogInformation("Called GET method (by id). Id: " + id);
+
+            if (!memoryCache.TryGetValue(cacheKey, out IEnumerable<Article> articleList))
+            {
+                // If memory has not value then retrieve data from database and set cache.
+                articleList = context.Article.ToList();
+
+                var cacheOptions = new MemoryCacheEntryOptions
+                {
+                    AbsoluteExpiration = DateTime.Now.AddMinutes(5),
+                    Priority = CacheItemPriority.Normal
+                };
+
+                memoryCache.Set(cacheKey, articleList, cacheOptions);
+
+                logger.LogInformation("List has been retrieved from database.");
+            }
+            else
+            {
+                logger.LogInformation("List has been retrieved from cache.");
+            }
+
+            var article = articleList.FirstOrDefault(x => x.Id == id);
             if (article == null)
             {
                 logger.LogError("Article not found with this id: " + id);
                 return NotFound();
             }
-            logger.LogInformation("Called GET method (by id). Id: " + id);
 
             return new ObjectResult(article);
         }
