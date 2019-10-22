@@ -21,7 +21,7 @@ namespace Article.API
 
         public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception exception, Func<TState, Exception, string> formatter)
         {
-            var message = string.Format("{0}: {1} - {2}", logLevel.ToString(), eventId.Name, formatter(state, exception));
+            var message = string.Format("{0}:({1}) {2} - {3}", logLevel.ToString(), DateTime.Now, eventId.Name, formatter(state, exception));
             WriteToFile(message);
         }
 
