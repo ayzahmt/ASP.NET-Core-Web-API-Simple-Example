@@ -12,9 +12,9 @@ namespace Article.API.Repository
 
         T SelectById(int id);
 
-        void Insert([FromBody] T article);
+        void Insert([FromBody] T entity);
 
-        void Update([FromBody] T article);
+        void Update([FromBody] T entity);
 
         void DeleteById(int id);
 

@@ -16,7 +16,7 @@ namespace Article.API.Repository
         readonly ArticleContext context;
         readonly ILogger<ArticlesController> logger;
         readonly IMemoryCache memoryCache;
-        const string cacheKey = "ArticleListKey";
+        string cacheKey = "articleCacheKey" + typeof(T).FullName;
 
         public GenericRepository(ArticleContext context, ILogger<ArticlesController> logger, IMemoryCache memoryCache)
         {

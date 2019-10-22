@@ -316,3 +316,597 @@ Information:  - Executing ObjectResult, writing value of type 'Article.API.Artic
 Information:  - Executed action Article.API.Controllers.ArticlesController.Get (Article.API) in 9218.9395ms
 Information:  - Request finished in 9252.2952ms 200 application/json; charset=utf-8
 Information: RequestBodyNotEntirelyRead - Connection id "0HLQM3ITF06NM", Request id "0HLQM3ITF06NM:00000003": the application completed without reading the entire request body.
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles  
+Warning:  - Failed to determine the https port for redirect.
+Information:  - Route matched with {action = "Get", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.Article] Get() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executed action Article.API.Controllers.ArticlesController.Get (Article.API) in 5.4149ms
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information:  - Request finished in 514.8382ms 500 text/html; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/favicon.ico  
+Information:  - Route matched with {action = "Get", controller = "Details"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Get(Int32) on controller Article.API.Controllers.DetailsController (Article.API).
+Information:  - Executed action Article.API.Controllers.DetailsController.Get (Article.API) in 0.7039ms
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information:  - Request finished in 70.5995ms 500 text/html; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles  
+Warning:  - Failed to determine the https port for redirect.
+Information:  - Route matched with {action = "Get", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.Article] Get() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.Get (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Author], [a].[Name], [a].[PublishDate], [a].[Subject]
+FROM [Article] AS [a]
+Information:  - List has been retrieved from database.
+Information:  - Executed action method Article.API.Controllers.ArticlesController.Get (Article.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 14269.1361ms.
+Information:  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Article.API.Article, Article.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.Get (Article.API) in 14587.3635ms
+Information:  - Request finished in 14941.9957ms 200 application/json; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/favicon.ico  
+Information:  - Route matched with {action = "Get", controller = "Details"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Get(Int32) on controller Article.API.Controllers.DetailsController (Article.API).
+Information:  - Executing action method Article.API.Controllers.DetailsController.Get (Article.API) - Validation state: Invalid
+Information:  - Called GET method (by id). Id: 0
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[ArticleId], [e].[Comment], [e].[CommentDate], [e].[Commentator]
+FROM [ArticleDetails] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Error:  - Record not found with this id: 0
+Information:  - Executed action method Article.API.Controllers.DetailsController.Get (Article.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 58.5854ms.
+Information:  - Executing ObjectResult, writing value of type 'null'.
+Information:  - Executed action Article.API.Controllers.DetailsController.Get (Article.API) in 83.0929ms
+Information:  - Request finished in 110.012ms 204 
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/details application/json 131
+Information:  - Request finished in 5.3619ms 404 
+Information: RequestBodyNotEntirelyRead - Connection id "0HLQMQ6IRSPDS", Request id "0HLQMQ6IRSPDS:00000003": the application completed without reading the entire request body.
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles  
+Warning:  - Failed to determine the https port for redirect.
+Information:  - Route matched with {action = "Get", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.Article] Get() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.Get (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Author], [a].[Name], [a].[PublishDate], [a].[Subject]
+FROM [Article] AS [a]
+Information:  - List has been retrieved from database.
+Information:  - Executed action method Article.API.Controllers.ArticlesController.Get (Article.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 5786.253ms.
+Information:  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Article.API.Article, Article.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.Get (Article.API) in 6068.3915ms
+Information:  - Request finished in 6374.6737ms 200 application/json; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/favicon.ico  
+Information:  - Request finished in 9.8552ms 404 
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/details application/json 131
+Information:  - Route matched with {action = "Get", controller = "Details"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.ArticleDetails] Get() on controller Article.API.Controllers.DetailsController (Article.API).
+Information:  - Executing action method Article.API.Controllers.DetailsController.Get (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles  
+Warning:  - Failed to determine the https port for redirect.
+Information:  - Route matched with {action = "Get", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.Article] Get() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.Get (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Author], [a].[Name], [a].[PublishDate], [a].[Subject]
+FROM [Article] AS [a]
+Information:  - List has been retrieved from database.
+Information:  - Executed action method Article.API.Controllers.ArticlesController.Get (Article.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3182.0407ms.
+Information:  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Article.API.Article, Article.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.Get (Article.API) in 3486.6208ms
+Information:  - Request finished in 3787.5068ms 200 application/json; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/favicon.ico  
+Information:  - Request finished in 22.8465ms 404 
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles/details/add application/json 114
+Information:  - Route matched with {action = "AddComment", controller = "Articles"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult AddComment(Article.API.ArticleDetails) on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.AddComment (Article.API) - Validation state: Valid
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information:  - Cache cleaned. Cache Key: ArticleListKey
+Information:  - Inserted. {"Id":-2147482647,"ArticleId":5,"Comment":"Bu makale test test test","Commentator":"Ali","CommentDate":"2019-10-22T00:00:00"}
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [ArticleDetails] ([ArticleId], [Comment], [CommentDate], [Commentator])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [ArticleDetails]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Information:  - Executed action method Article.API.Controllers.ArticlesController.AddComment (Article.API), returned result Microsoft.AspNetCore.Mvc.OkResult in 14759.8689ms.
+Information:  - Executing HttpStatusCodeResult, setting HTTP status code 200
+Information:  - Executed action Article.API.Controllers.ArticlesController.AddComment (Article.API) in 18657.5247ms
+Information:  - Request finished in 18700.0719ms 200 
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles/details/add application/json 130
+Information:  - Route matched with {action = "AddComment", controller = "Articles"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult AddComment(Article.API.ArticleDetails) on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.AddComment (Article.API) - Validation state: Valid
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information:  - Cache cleaned. Cache Key: ArticleListKey
+Information:  - Inserted. {"Id":-2147482646,"ArticleId":1,"Comment":"Test Test Test Bu makale test test test","Commentator":"Veli","CommentDate":"2019-10-22T00:00:00"}
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [ArticleDetails] ([ArticleId], [Comment], [CommentDate], [Commentator])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [ArticleDetails]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Information:  - Executed action method Article.API.Controllers.ArticlesController.AddComment (Article.API), returned result Microsoft.AspNetCore.Mvc.OkResult in 1340.4216ms.
+Information:  - Executing HttpStatusCodeResult, setting HTTP status code 200
+Information:  - Executed action Article.API.Controllers.ArticlesController.AddComment (Article.API) in 1352.6264ms
+Information:  - Request finished in 1365.5043ms 200 
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles  
+Warning:  - Failed to determine the https port for redirect.
+Information:  - Route matched with {action = "Get", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.Article] Get() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.Get (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Author], [a].[Name], [a].[PublishDate], [a].[Subject]
+FROM [Article] AS [a]
+Information:  - List has been retrieved from database.
+Information:  - Executed action method Article.API.Controllers.ArticlesController.Get (Article.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4384.5764ms.
+Information:  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Article.API.Article, Article.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.Get (Article.API) in 4639.9503ms
+Information:  - Request finished in 4917.6955ms 200 application/json; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/favicon.ico  
+Information:  - Request finished in 10.9487ms 404 
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles/details application/json 130
+Information:  - Route matched with {action = "GetDetails", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.ArticleDetails] GetDetails() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.GetDetails (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information:  - Executed action Article.API.Controllers.ArticlesController.GetDetails (Article.API) in 45838.2248ms
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information:  - Request finished in 46024.3676ms 500 text/html; charset=utf-8
+Information: RequestBodyNotEntirelyRead - Connection id "0HLQMRJBHN29R", Request id "0HLQMRJBHN29R:00000003": the application completed without reading the entire request body.
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles  
+Warning:  - Failed to determine the https port for redirect.
+Information:  - Route matched with {action = "Get", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.Article] Get() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.Get (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Author], [a].[Name], [a].[PublishDate], [a].[Subject]
+FROM [Article] AS [a]
+Information:  - List has been retrieved from database.
+Information:  - Executed action method Article.API.Controllers.ArticlesController.Get (Article.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 8202.9132ms.
+Information:  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Article.API.Article, Article.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.Get (Article.API) in 8451.7021ms
+Information:  - Request finished in 8742.0306ms 200 application/json; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/favicon.ico  
+Information:  - Request finished in 9.5764ms 404 
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles/details/1 application/json 130
+Information:  - Route matched with {action = "GetDetailsByArticleId", controller = "Articles"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult GetDetailsByArticleId(Int32) on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.GetDetailsByArticleId (Article.API) - Validation state: Valid
+Information:  - Called GET method (by id). Id: 1
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[ArticleId], [e].[Comment], [e].[CommentDate], [e].[Commentator]
+FROM [ArticleDetails] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Information:  - Executed action method Article.API.Controllers.ArticlesController.GetDetailsByArticleId (Article.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 9178.8137ms.
+Information:  - Executing ObjectResult, writing value of type 'Article.API.ArticleDetails'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.GetDetailsByArticleId (Article.API) in 11391.3957ms
+Information:  - Request finished in 11429.6549ms 200 application/json; charset=utf-8
+Information: RequestBodyNotEntirelyRead - Connection id "0HLQMRRHIL3NT", Request id "0HLQMRRHIL3NT:00000003": the application completed without reading the entire request body.
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles/details/ application/json 130
+Information:  - Route matched with {action = "GetDetails", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.ArticleDetails] GetDetails() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.GetDetails (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information:  - Executed action Article.API.Controllers.ArticlesController.GetDetails (Article.API) in 55598.1138ms
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information:  - Request finished in 55740.3919ms 500 text/html; charset=utf-8
+Information: RequestBodyNotEntirelyRead - Connection id "0HLQMRRHIL3NT", Request id "0HLQMRRHIL3NT:00000004": the application completed without reading the entire request body.
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles/details/ application/json 130
+Information:  - Route matched with {action = "GetDetails", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.ArticleDetails] GetDetails() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.GetDetails (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[ArticleId], [a].[Comment], [a].[CommentDate], [a].[Commentator]
+FROM [ArticleDetails] AS [a]
+Information:  - List has been retrieved from database.
+Information:  - Executed action method Article.API.Controllers.ArticlesController.GetDetails (Article.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 27044.1757ms.
+Information:  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Article.API.ArticleDetails, Article.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.GetDetails (Article.API) in 27058.7539ms
+Information:  - Request finished in 27072.6172ms 200 application/json; charset=utf-8
+Information: RequestBodyNotEntirelyRead - Connection id "0HLQMRRHIL3NU", Request id "0HLQMRRHIL3NU:00000001": the application completed without reading the entire request body.
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles/details/ application/json 130
+Information:  - Route matched with {action = "GetDetails", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.ArticleDetails] GetDetails() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.GetDetails (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information:  - List has been retrieved from cache.
+Information:  - Executed action method Article.API.Controllers.ArticlesController.GetDetails (Article.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 6901.7869ms.
+Information:  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Article.API.ArticleDetails, Article.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.GetDetails (Article.API) in 104453.9828ms
+Information:  - Request finished in 104470.429ms 200 application/json; charset=utf-8
+Information: RequestBodyNotEntirelyRead - Connection id "0HLQMRRHIL3NU", Request id "0HLQMRRHIL3NU:00000002": the application completed without reading the entire request body.
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles  
+Warning:  - Failed to determine the https port for redirect.
+Information:  - Route matched with {action = "Get", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.Article] Get() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.Get (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Author], [a].[Name], [a].[PublishDate], [a].[Subject]
+FROM [Article] AS [a]
+Information:  - List has been retrieved from database.
+Information:  - Executed action method Article.API.Controllers.ArticlesController.Get (Article.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3016.2358ms.
+Information:  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Article.API.Article, Article.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.Get (Article.API) in 3284.7322ms
+Information:  - Request finished in 3574.2948ms 200 application/json; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/favicon.ico  
+Information:  - Request finished in 5.2383ms 404 
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles/details/ application/json 130
+Information:  - Route matched with {action = "GetDetails", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.ArticleDetails] GetDetails() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.GetDetails (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information:  - Executed action Article.API.Controllers.ArticlesController.GetDetails (Article.API) in 27577.0553ms
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information:  - Request finished in 27711.6284ms 500 text/html; charset=utf-8
+Information: RequestBodyNotEntirelyRead - Connection id "0HLQMS040R374", Request id "0HLQMS040R374:00000003": the application completed without reading the entire request body.
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles/details/ application/json 130
+Information:  - Route matched with {action = "GetDetails", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.ArticleDetails] GetDetails() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.GetDetails (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information:  - Executed action Article.API.Controllers.ArticlesController.GetDetails (Article.API) in 12459.2104ms
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information:  - Request finished in 12488.1189ms 500 text/html; charset=utf-8
+Information: RequestBodyNotEntirelyRead - Connection id "0HLQMS040R374", Request id "0HLQMS040R374:00000004": the application completed without reading the entire request body.
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles/details/ application/json 130
+Information:  - Route matched with {action = "GetDetails", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.ArticleDetails] GetDetails() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.GetDetails (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information:  - Executed action Article.API.Controllers.ArticlesController.GetDetails (Article.API) in 49439.6572ms
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information:  - Request finished in 49538.8702ms 500 text/html; charset=utf-8
+Information: RequestBodyNotEntirelyRead - Connection id "0HLQMS040R374", Request id "0HLQMS040R374:00000005": the application completed without reading the entire request body.
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles/details/ application/json 130
+Information:  - Route matched with {action = "GetDetails", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.ArticleDetails] GetDetails() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.GetDetails (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles  
+Warning:  - Failed to determine the https port for redirect.
+Information:  - Route matched with {action = "Get", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.Article] Get() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.Get (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Author], [a].[Name], [a].[PublishDate], [a].[Subject]
+FROM [Article] AS [a]
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles  
+Warning:  - Failed to determine the https port for redirect.
+Information:  - Route matched with {action = "Get", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.Article] Get() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.Get (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Author], [a].[Name], [a].[PublishDate], [a].[Subject]
+FROM [Article] AS [a]
+Information:  - List has been retrieved from database.
+Information:  - Executed action method Article.API.Controllers.ArticlesController.Get (Article.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 60097.1187ms.
+Information:  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Article.API.Article, Article.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.Get (Article.API) in 60394.7909ms
+Information:  - Request finished in 60749.0005ms 200 application/json; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/favicon.ico  
+Information:  - Request finished in 7.9919ms 404 
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles/details/ application/json 130
+Information:  - Route matched with {action = "GetDetails", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.ArticleDetails] GetDetails() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.GetDetails (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[ArticleId], [a].[Comment], [a].[CommentDate], [a].[Commentator]
+FROM [ArticleDetails] AS [a]
+Information:  - List has been retrieved from database.
+Information:  - Executed action method Article.API.Controllers.ArticlesController.GetDetails (Article.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 10443.9714ms.
+Information:  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Article.API.ArticleDetails, Article.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.GetDetails (Article.API) in 10488.1907ms
+Information:  - Request finished in 10512.4036ms 200 application/json; charset=utf-8
+Information: RequestBodyNotEntirelyRead - Connection id "0HLQMS38BJ3UC", Request id "0HLQMS38BJ3UC:00000003": the application completed without reading the entire request body.
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles/details/ application/json 130
+Information:  - Route matched with {action = "GetDetails", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.ArticleDetails] GetDetails() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.GetDetails (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information:  - List has been retrieved from cache.
+Information:  - Executed action method Article.API.Controllers.ArticlesController.GetDetails (Article.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 76157.3797ms.
+Information:  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Article.API.ArticleDetails, Article.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.GetDetails (Article.API) in 76188.3995ms
+Information:  - Request finished in 76215.9113ms 200 application/json; charset=utf-8
+Information: RequestBodyNotEntirelyRead - Connection id "0HLQMS38BJ3UC", Request id "0HLQMS38BJ3UC:00000004": the application completed without reading the entire request body.
+Information:  - Request starting HTTP/1.1 POST http://localhost:54263/api/articles/details/add application/json 118
+Information:  - Route matched with {action = "AddComment", controller = "Articles"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult AddComment(Article.API.ArticleDetails) on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.AddComment (Article.API) - Validation state: Valid
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information:  - Cache cleaned. Cache Key: articleCacheKeyArticle.API.ArticleDetails
+Information:  - Inserted. {"Id":-2147482647,"ArticleId":1,"Comment":"Yeni bir yorum yapıldı.","Commentator":"Colins","CommentDate":"2019-10-22T00:00:00"}
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [ArticleDetails] ([ArticleId], [Comment], [CommentDate], [Commentator])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [ArticleDetails]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Information:  - Executed action method Article.API.Controllers.ArticlesController.AddComment (Article.API), returned result Microsoft.AspNetCore.Mvc.OkResult in 3737.288ms.
+Information:  - Executing HttpStatusCodeResult, setting HTTP status code 200
+Information:  - Executed action Article.API.Controllers.ArticlesController.AddComment (Article.API) in 5158.5207ms
+Information:  - Request finished in 5193.9137ms 200 
+Information:  - Request starting HTTP/1.1 POST http://localhost:54263/api/articles/details/add application/json 135
+Information:  - Route matched with {action = "AddComment", controller = "Articles"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult AddComment(Article.API.ArticleDetails) on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.AddComment (Article.API) - Validation state: Valid
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information:  - Cache cleaned. Cache Key: articleCacheKeyArticle.API.ArticleDetails
+Information:  - Inserted. {"Id":2,"ArticleId":1,"Comment":"Makaleye ait yorum güncellendi.","Commentator":"Colins","CommentDate":"2019-10-22T00:00:00"}
+Error: Microsoft.EntityFrameworkCore.Database.Command.CommandError - Failed executing DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [ArticleDetails] ([Id], [ArticleId], [Comment], [CommentDate], [Commentator])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+Error: Microsoft.EntityFrameworkCore.Update.SaveChangesFailed - An exception occurred in the database while saving changes for context type 'Article.API.ArticleContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert explicit value for identity column in table 'ArticleDetails' when IDENTITY_INSERT is set to OFF.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(DbContext _, ValueTuple`2 parameters)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IReadOnlyList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Information:  - Executed action Article.API.Controllers.ArticlesController.AddComment (Article.API) in 243427.31ms
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information:  - Request finished in 243578.9584ms 500 text/html; charset=utf-8
+Information:  - Request starting HTTP/1.1 PUT http://localhost:54263/api/articles/details/2 application/json 135
+Information:  - Route matched with {action = "UpdateDetails", controller = "Articles"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult UpdateDetails(Article.API.ArticleDetails) on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.UpdateDetails (Article.API) - Validation state: Valid
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information:  - Cache cleaned. Cache Key: articleCacheKeyArticle.API.ArticleDetails
+Information:  - Updated. {"Id":2,"ArticleId":1,"Comment":"Makaleye ait yorum güncellendi.","Commentator":"Colins","CommentDate":"2019-10-22T00:00:00"}
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (3ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [ArticleDetails] SET [ArticleId] = @p0, [Comment] = @p1, [CommentDate] = @p2, [Commentator] = @p3
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+Information:  - Executed action method Article.API.Controllers.ArticlesController.UpdateDetails (Article.API), returned result Microsoft.AspNetCore.Mvc.OkResult in 49.6227ms.
+Information:  - Executing HttpStatusCodeResult, setting HTTP status code 200
+Information:  - Executed action Article.API.Controllers.ArticlesController.UpdateDetails (Article.API) in 59.6413ms
+Information:  - Request finished in 71.7388ms 200 
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles  
+Warning:  - Failed to determine the https port for redirect.
+Information:  - Route matched with {action = "Get", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.Article] Get() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.Get (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (36ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Author], [a].[Name], [a].[PublishDate], [a].[Subject]
+FROM [Article] AS [a]
+Information:  - List has been retrieved from database.
+Information:  - Executed action method Article.API.Controllers.ArticlesController.Get (Article.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 15384.1483ms.
+Information:  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Article.API.Article, Article.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.Get (Article.API) in 15712.0479ms
+Information:  - Request finished in 16136.6231ms 200 application/json; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/favicon.ico  
+Information:  - Request finished in 32.8159ms 404 
+Information:  - Request starting HTTP/1.1 POST http://localhost:54263/api/articles/details/add application/json 136
+Information:  - Route matched with {action = "AddComment", controller = "Articles"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult AddComment(Article.API.ArticleDetails) on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.AddComment (Article.API) - Validation state: Valid
+Information:  - Called GET method (by id). Id: 11
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[ArticleId], [e].[Comment], [e].[CommentDate], [e].[Commentator]
+FROM [ArticleDetails] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Error:  - Record not found with this id: 11
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles  
+Warning:  - Failed to determine the https port for redirect.
+Information:  - Route matched with {action = "Get", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.Article] Get() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.Get (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Author], [a].[Name], [a].[PublishDate], [a].[Subject]
+FROM [Article] AS [a]
+Information:  - List has been retrieved from database.
+Information:  - Executed action method Article.API.Controllers.ArticlesController.Get (Article.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2511.8408ms.
+Information:  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Article.API.Article, Article.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.Get (Article.API) in 2803.0114ms
+Information:  - Request finished in 3236.094ms 200 application/json; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/favicon.ico  
+Information:  - Request finished in 10.1392ms 404 
+Information:  - Request starting HTTP/1.1 PUT http://localhost:54263/api/articles/details/11 application/json 136
+Information:  - Route matched with {action = "UpdateDetails", controller = "Articles"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult UpdateDetails(Article.API.ArticleDetails) on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.UpdateDetails (Article.API) - Validation state: Valid
+Information:  - Called GET method (by id). Id: 11
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[ArticleId], [e].[Comment], [e].[CommentDate], [e].[Commentator]
+FROM [ArticleDetails] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Error:  - Record not found with this id: 11
+Information:  - Executed action Article.API.Controllers.ArticlesController.UpdateDetails (Article.API) in 19450.7548ms
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information:  - Request finished in 19644.9713ms 500 text/html; charset=utf-8
+Information:  - Request starting HTTP/1.1 PUT http://localhost:54263/api/articles/details/11 application/json 136
+Information:  - Route matched with {action = "UpdateDetails", controller = "Articles"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult UpdateDetails(Article.API.ArticleDetails) on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.UpdateDetails (Article.API) - Validation state: Valid
+Information:  - Called GET method (by id). Id: 11
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[ArticleId], [e].[Comment], [e].[CommentDate], [e].[Commentator]
+FROM [ArticleDetails] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Error:  - Record not found with this id: 11
+Information:  - Executed action Article.API.Controllers.ArticlesController.UpdateDetails (Article.API) in 32146.531ms
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information:  - Request finished in 32183.1573ms 500 text/html; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles  
+Warning:  - Failed to determine the https port for redirect.
+Information:  - Route matched with {action = "Get", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.Article] Get() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.Get (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Author], [a].[Name], [a].[PublishDate], [a].[Subject]
+FROM [Article] AS [a]
+Information:  - List has been retrieved from database.
+Information:  - Executed action method Article.API.Controllers.ArticlesController.Get (Article.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 2920.4342ms.
+Information:  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Article.API.Article, Article.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.Get (Article.API) in 3271.2462ms
+Information:  - Request finished in 3715.8437ms 200 application/json; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/favicon.ico  
+Information:  - Request finished in 12.6658ms 404 
+Information:  - Request starting HTTP/1.1 PUT http://localhost:54263/api/articles/ application/json 136
+Information:  - Request finished in 12.9882ms 404 
+Information: RequestBodyNotEntirelyRead - Connection id "0HLQMSG3HLSMK", Request id "0HLQMSG3HLSMK:00000001": the application completed without reading the entire request body.
+Information:  - Request starting HTTP/1.1 PUT http://localhost:54263/api/articles/41 application/json 136
+Information:  - Route matched with {action = "Put", controller = "Articles"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Put(Article.API.Article) on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.Put (Article.API) - Validation state: Valid
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information:  - Cache cleaned. Cache Key: articleCacheKeyArticle.API.Article
+Information:  - Updated. {"Id":41,"Name":"Test","Author":"Ahmet Ayaz","Subject":"Segmentation Lung Tissue from CT","PublishDate":"2019-10-21T00:00:00"}
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (3ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Article] SET [Author] = @p0, [Name] = @p1, [PublishDate] = @p2, [Subject] = @p3
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+Error: Microsoft.EntityFrameworkCore.Update.SaveChangesFailed - An exception occurred in the database while saving changes for context type 'Article.API.ArticleContext'.
+Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException: Database operation expected to affect 1 row(s) but actually affected 0 row(s). Data may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyException(Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithoutPropagation(Int32 commandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(DbContext _, ValueTuple`2 parameters)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IReadOnlyList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IReadOnlyList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Information:  - Executed action Article.API.Controllers.ArticlesController.Put (Article.API) in 20516.119ms
+Error: UnhandledException - An unhandled exception has occurred while executing the request.
+Information:  - Request finished in 20614.7282ms 500 text/html; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles  
+Warning:  - Failed to determine the https port for redirect.
+Information:  - Route matched with {action = "Get", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.Article] Get() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.Get (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Author], [a].[Name], [a].[PublishDate], [a].[Subject]
+FROM [Article] AS [a]
+Information:  - List has been retrieved from database.
+Information:  - Executed action method Article.API.Controllers.ArticlesController.Get (Article.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4613.8523ms.
+Information:  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Article.API.Article, Article.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.Get (Article.API) in 5001.9184ms
+Information:  - Request finished in 5361.2684ms 200 application/json; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/favicon.ico  
+Information:  - Request finished in 6.0063ms 404 
+Information:  - Request starting HTTP/1.1 PUT http://localhost:54263/api/articles/41 application/json 136
+Information:  - Route matched with {action = "Put", controller = "Articles"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Put(Article.API.Article) on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.Put (Article.API) - Validation state: Valid
+Information:  - Called GET method (by id). Id: 41
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Author], [e].[Name], [e].[PublishDate], [e].[Subject]
+FROM [Article] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Error:  - Record not found with this id: 41
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles  
+Warning:  - Failed to determine the https port for redirect.
+Information:  - Route matched with {action = "Get", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.Article] Get() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.Get (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Author], [a].[Name], [a].[PublishDate], [a].[Subject]
+FROM [Article] AS [a]
+Information:  - List has been retrieved from database.
+Information:  - Executed action method Article.API.Controllers.ArticlesController.Get (Article.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 3063.4299ms.
+Information:  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Article.API.Article, Article.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.Get (Article.API) in 3377.9542ms
+Information:  - Request finished in 3763.6254ms 200 application/json; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/favicon.ico  
+Information:  - Request finished in 6.9869ms 404 
+Information:  - Request starting HTTP/1.1 PUT http://localhost:54263/api/articles/41 application/json 136
+Information:  - Route matched with {action = "Put", controller = "Articles"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Put(Article.API.Article) on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.Put (Article.API) - Validation state: Valid
+Information:  - Called GET method (by id). Id: 41
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Author], [e].[Name], [e].[PublishDate], [e].[Subject]
+FROM [Article] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Error:  - Record not found with this id: 41
+Information:  - Executed action method Article.API.Controllers.ArticlesController.Put (Article.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 75.5923ms.
+Information:  - Executing ObjectResult, writing value of type 'System.String'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.Put (Article.API) in 152.6242ms
+Information:  - Request finished in 184.4292ms 400 text/plain; charset=utf-8
+Information:  - Request starting HTTP/1.1 PUT http://localhost:54263/api/articles/details/11 application/json 136
+Information:  - Route matched with {action = "UpdateDetails", controller = "Articles"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult UpdateDetails(Article.API.ArticleDetails) on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.UpdateDetails (Article.API) - Validation state: Valid
+Information:  - Called GET method (by id). Id: 11
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[ArticleId], [e].[Comment], [e].[CommentDate], [e].[Commentator]
+FROM [ArticleDetails] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Error:  - Record not found with this id: 11
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/api/articles  
+Warning:  - Failed to determine the https port for redirect.
+Information:  - Route matched with {action = "Get", controller = "Articles"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Article.API.Article] Get() on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.Get (Article.API) - Validation state: Valid
+Information:  - Called GET method.
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[Author], [a].[Name], [a].[PublishDate], [a].[Subject]
+FROM [Article] AS [a]
+Information:  - List has been retrieved from database.
+Information:  - Executed action method Article.API.Controllers.ArticlesController.Get (Article.API), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 4220.949ms.
+Information:  - Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[Article.API.Article, Article.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.Get (Article.API) in 4677.4927ms
+Information:  - Request finished in 5137.3446ms 200 application/json; charset=utf-8
+Information:  - Request starting HTTP/1.1 GET http://localhost:54263/favicon.ico  
+Information:  - Request finished in 12.9001ms 404 
+Information:  - Request starting HTTP/1.1 PUT http://localhost:54263/api/articles/details/11 application/json 136
+Information:  - Route matched with {action = "UpdateDetails", controller = "Articles"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult UpdateDetails(Article.API.ArticleDetails) on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.UpdateDetails (Article.API) - Validation state: Valid
+Information:  - Called GET method (by id). Id: 11
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[ArticleId], [e].[Comment], [e].[CommentDate], [e].[Commentator]
+FROM [ArticleDetails] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Error:  - Record not found with this id: 11
+Information:  - Executed action method Article.API.Controllers.ArticlesController.UpdateDetails (Article.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 4972.5938ms.
+Information:  - Executing ObjectResult, writing value of type 'System.String'.
+Information:  - Executed action Article.API.Controllers.ArticlesController.UpdateDetails (Article.API) in 14866.6218ms
+Information:  - Request finished in 14891.7853ms 400 text/plain; charset=utf-8
+Information:  - Request starting HTTP/1.1 DELETE http://localhost:54263/api/articles/details/3 application/json 136
+Warning:  - Failed to determine the https port for redirect.
+Information:  - Route matched with {action = "DeleteComment", controller = "Articles"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult DeleteComment(Int32) on controller Article.API.Controllers.ArticlesController (Article.API).
+Information:  - Executing action method Article.API.Controllers.ArticlesController.DeleteComment (Article.API) - Validation state: Valid
+Information: Microsoft.EntityFrameworkCore.Infrastructure.ContextInitialized - Entity Framework Core 2.1.11-servicing-32099 initialized 'ArticleContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (4ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[ArticleId], [e].[Comment], [e].[CommentDate], [e].[Commentator]
+FROM [ArticleDetails] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+Information:  - Cache cleaned. Cache Key: articleCacheKeyArticle.API.ArticleDetails
+Information:  - Deleted. {"Id":3,"ArticleId":1,"Comment":"Yeni bir yorum yapildi.","Commentator":"Colins","CommentDate":"2019-10-22T00:00:00"}
+Information: Microsoft.EntityFrameworkCore.Database.Command.CommandExecuted - Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [ArticleDetails]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+Information:  - Executed action method Article.API.Controllers.ArticlesController.DeleteComment (Article.API), returned result Microsoft.AspNetCore.Mvc.OkResult in 662.8366ms.
+Information:  - Executing HttpStatusCodeResult, setting HTTP status code 200
+Information:  - Executed action Article.API.Controllers.ArticlesController.DeleteComment (Article.API) in 873.501ms
+Information:  - Request finished in 1155.3287ms 200 
+Information: RequestBodyNotEntirelyRead - Connection id "0HLQMSKU449SV", Request id "0HLQMSKU449SV:00000001": the application completed without reading the entire request body.

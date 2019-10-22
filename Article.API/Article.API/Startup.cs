@@ -31,6 +31,7 @@ namespace Article.API
             services.AddDbContext<ArticleContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ArticleDB")));
             services.AddMemoryCache();
             services.AddScoped<IArticleRepository, ArticleRepository>();
+            services.AddScoped<IDetailsRepository, DetailsRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
