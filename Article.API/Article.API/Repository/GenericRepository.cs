@@ -75,6 +75,7 @@ namespace Article.API.Repository
             logger.LogInformation("Inserted. " + JsonConvert.SerializeObject(entity));
         }
 
+
         public void Save()
         {
             context.SaveChanges();
