@@ -23,6 +23,7 @@ namespace Article.API
         {
             var message = string.Format("{0}:({1}) {2} - {3}", logLevel.ToString(), DateTime.Now, eventId.Name, formatter(state, exception));
             WriteToFile(message);
+
         }
 
         void WriteToFile(string message)
